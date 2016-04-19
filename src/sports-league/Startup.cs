@@ -8,6 +8,7 @@ using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Data.Entity;
 using Microsoft.Extensions.Configuration;
+using sports_league.Models;
 
 namespace sports_league
 {

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<sports_league.Models.Team>
+
+<html>
+<head>
+    <title>Sports League</title>
+</head>
+<body>
+    <h2>Sports League!</h2>
+    <h4>@Html.DisplayNameFor(model => model.PlayerOne)</h4>
+    <ul>
+        @foreach(var listTeam in Model)
+        { 
+            <li>@Html.DisplayNameFor(modelTeam => listTeam.Captain): @Html.DisplayFor(modelTeam => listTeam.Captain)</li>
+            <ul>
+                <li>@Html.DisplayFor(modelTeam => listTeam.PlayerOne)</li>
+                <li>@Html.DisplayFor(modelTeam => listTeam.PlayerTwo)</li>
+                <li>@Html.DisplayFor(modelTeam => listTeam.PlayerThree)</li>
+
+            </ul>
+        }
+    </ul>
+
+</body>
+</html>
+          
