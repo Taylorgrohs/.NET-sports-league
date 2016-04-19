@@ -20,5 +20,18 @@ namespace sports_league.Controllers
             var thisTeam = db.Teams.FirstOrDefault(x => x.TeamId == id);
             return View(thisTeam);
         }
+        
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Team team)
+        {
+            db.Teams.Add(team);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

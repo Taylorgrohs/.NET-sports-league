@@ -1,0 +1,29 @@
+﻿@model sports_league.Models.Team
+<html>
+<head>
+    <title>Sports League - Create</title>
+</head>
+<body>
+    <h2>Create</h2>
+    <hr />
+    <h3>Add a new Team</h3>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Captain)
+        @Html.TextBoxFor(model => model.Captain)
+        <br /><br />
+        @Html.LabelFor(model => model.PlayerOne)
+        @Html.TextBoxFor(model => model.PlayerOne)
+        <br /><br />
+        @Html.LabelFor(model => model.PlayerTwo)
+        @Html.TextBoxFor(model => model.PlayerTwo)
+        <br /><br />
+        @Html.LabelFor(model => model.PlayerThree)
+        @Html.TextBoxFor(model => model.PlayerThree)
+        <br /><br />
+
+        <input type="submit" value="Add new team"/>
+    }
+    <p>@Html.ActionLink("Back to list", "Index")</p>
+</body>
+</html>
