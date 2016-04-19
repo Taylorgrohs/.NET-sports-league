@@ -14,5 +14,11 @@ namespace sports_league.Controllers
         {
             return View(db.Teams.ToList());
         }
+
+        public IActionResult Details(int id)
+        {
+            var thisTeam = db.Teams.FirstOrDefault(x => x.TeamId == id);
+            return View(thisTeam);
+        }
     }
 }

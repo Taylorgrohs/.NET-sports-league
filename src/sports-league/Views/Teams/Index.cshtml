@@ -6,16 +6,16 @@
 </head>
 <body>
     <h2>Sports League!</h2>
-    <h4>@Html.DisplayNameFor(model => model.PlayerOne)</h4>
     <ul>
-        @foreach(var listTeam in Model)
-        { 
-            <li>@Html.DisplayNameFor(modelTeam => listTeam.Captain): @Html.DisplayFor(modelTeam => listTeam.Captain)</li>
+        @foreach (var listTeam in Model)
+        {
+            <li>Captain: @Html.DisplayFor(modelTeam => listTeam.Captain)</li>
+            <p>@Html.ActionLink("Details", "Details", new { id = listTeam.TeamId })</p>
             <ul>
-                <li>@Html.DisplayFor(modelTeam => listTeam.PlayerOne)</li>
-                <li>@Html.DisplayFor(modelTeam => listTeam.PlayerTwo)</li>
-                <li>@Html.DisplayFor(modelTeam => listTeam.PlayerThree)</li>
-
+                <li>Player One: @Html.DisplayFor(modelTeam => listTeam.PlayerOne)</li>
+                <li>Player Two: @Html.DisplayFor(modelTeam => listTeam.PlayerTwo)</li>
+                <li>Player Three: @Html.DisplayFor(modelTeam => listTeam.PlayerThree)</li>
+                <br>
             </ul>
         }
     </ul>
