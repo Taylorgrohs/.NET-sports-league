@@ -10,7 +10,7 @@
         @foreach (var listTeam in Model)
         {
             <li>Captain: @Html.DisplayFor(modelTeam => listTeam.Captain)</li>
-            <p>@Html.ActionLink("Details", "Details", new { id = listTeam.TeamId })</p>
+            <p>@Html.ActionLink("Details", "Details", new { id = listTeam.TeamId }) | @Html.ActionLink("Edit", "Edit", new { id = listTeam.TeamId }) | @Html.ActionLink("Delete", "Delete", new { id = listTeam.TeamId })</p>
             <ul>
                 <li>Player One: @Html.DisplayFor(modelTeam => listTeam.PlayerOne)</li>
                 <li>Player Two: @Html.DisplayFor(modelTeam => listTeam.PlayerTwo)</li>
@@ -22,4 +22,3 @@
     <p>@Html.ActionLink("Add new team", "Create")</p>
 </body>
 </html>
-          

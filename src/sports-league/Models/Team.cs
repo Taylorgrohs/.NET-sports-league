@@ -16,5 +16,7 @@ namespace sports_league.Models
         public string PlayerTwo { get; set; }
         public string PlayerThree { get; set; }
         public string Captain { get; set; }
+        public int DivisionId { get; set; }
+        public virtual Division Division { get; set; }
     }
 }

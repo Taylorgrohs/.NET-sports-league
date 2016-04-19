@@ -20,9 +20,12 @@
         <br /><br />
         @Html.LabelFor(model => model.PlayerThree)
         @Html.TextBoxFor(model => model.PlayerThree)
+
+        @Html.LabelFor(model =>  model.DivisionId)
+        @Html.DropDownList("DivisionId")
         <br /><br />
 
-        <input type="submit" value="Add new team"/>
+        <input type="submit" value="Create"/>
     }
     <p>@Html.ActionLink("Back to list", "Index")</p>
 </body>

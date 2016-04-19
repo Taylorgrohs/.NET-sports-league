@@ -1,0 +1,27 @@
+﻿@model sports_league.Models.Team
+
+<h3>Edit current team</h3>
+<hr />
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.TeamId)
+
+    @Html.LabelFor(model => model.Captain)
+    @Html.EditorFor(model => model.Captain)
+
+    @Html.LabelFor(model => model.PlayerOne)
+    @Html.EditorFor(model => model.PlayerOne)
+
+    @Html.LabelFor(model => model.PlayerTwo)
+    @Html.EditorFor(model => model.PlayerTwo)
+
+    @Html.LabelFor(model => model.PlayerThree)
+    @Html.EditorFor(model => model.PlayerThree)
+
+    @Html.LabelFor(model => model.DivisionId)
+    @Html.DropDownList("DivisionId")
+
+    <input type="submit" value="Save" />
+}
+@Html.ActionLink("Back to the list", "Index")

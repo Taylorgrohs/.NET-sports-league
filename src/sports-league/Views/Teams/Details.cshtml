@@ -8,6 +8,7 @@
     <h3>Details</h3>
     <hr />
     Captain: @Html.DisplayFor(model => model.Captain)
-    <p>@Html.ActionLink("Back to the list", "Index")</p>
+    
+    <p>@Html.ActionLink("Edit", "Edit", new { id = Model.TeamId }) | @Html.ActionLink("Back to the list", "Index")</p>
 </body>
 </html>
